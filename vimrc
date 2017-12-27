@@ -1,7 +1,8 @@
 syntax on
 colorscheme desert
 set background=dark
-hi normal guifg=grey guibg=black
+set guifont=Monospace\ 11
+hi normal guifg=white guibg=black
 hi comment ctermfg=red guifg=red
 
 set nocompatible
@@ -45,7 +46,7 @@ set matchtime=5
 set scrolloff=3
 
 set cursorline
-hi CursorLine term=bold cterm=bold ctermbg=0x808080 guibg=gray10
+hi CursorLine term=bold cterm=bold gui=bold ctermbg=0x808080 guibg=grey4
 
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
