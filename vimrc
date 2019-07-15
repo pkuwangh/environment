@@ -51,11 +51,12 @@ hi CursorLine term=bold cterm=bold gui=bold ctermbg=0x808080 guibg=grey4
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
 autocmd BufRead,BufNewFile SConscript set filetype=python
-autocmd BufRead,BufNewFile *.json set filetype=yaml
+autocmd BufRead,BufNewFile *.json set filetype=json
 autocmd BufNewFile,BufRead *.py set filetype=python
 autocmd BufNewFile,BufRead *.m set filetype=octave
 autocmd BufNewFile,BufRead *.cu set filetype=cuda
 autocmd BufNewFile,BufRead *.cl set filetype=opencl
+autocmd BufNewFile,BufRead makefile.rules set filetype=make
 
 fun! ShowFuncName()
     let lnum = line(".")
