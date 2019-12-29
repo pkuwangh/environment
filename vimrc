@@ -5,6 +5,8 @@ set guifont=Monospace\ 11
 hi normal guifg=white guibg=black
 hi comment ctermfg=red guifg=red
 
+imap jj <Esc>
+
 set nocompatible
 set confirm
 
@@ -47,6 +49,8 @@ set scrolloff=3
 
 set cursorline
 hi CursorLine term=bold cterm=bold gui=bold ctermbg=0x808080 guibg=grey4
+
+set visualbell
 
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 

@@ -1,0 +1,10 @@
+# incremental search
+set editing-mode vi
+
+# partial match
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# delete word
+"\C-w": backward-delete-word
+
