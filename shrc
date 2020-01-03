@@ -1,5 +1,5 @@
 # prompt
 set prompt = '%{\e]2;%~\a%}[%n@%m:%c3]%# '  # tsch
 export PROMPT_DIRTRIM=2   # bash
-
+export LS_COLORS=$LS_COLORS:'di=0;33'
 
