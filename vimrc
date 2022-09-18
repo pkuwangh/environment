@@ -26,7 +26,7 @@ set number
 set history=100
 
 set nobackup
-set directory=/home/wangh/.vim/swap//
+set directory=~/.vim/swap//
 
 set ignorecase
 set smartcase
@@ -47,8 +47,8 @@ set showmatch
 set matchtime=5
 set scrolloff=3
 
-set cursorline
-hi CursorLine term=bold cterm=bold gui=bold ctermbg=0x808080 guibg=grey4
+# set cursorline
+# hi CursorLine term=bold cterm=bold gui=bold ctermbg=0x808080 guibg=grey4
 
 set visualbell
 
