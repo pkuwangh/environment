@@ -26,7 +26,6 @@ set number
 set history=100
 
 set nobackup
-set directory=~/.vim/swap//
 
 set ignorecase
 set smartcase
@@ -34,8 +33,8 @@ set smartcase
 set hlsearch
 set incsearch
 
-set statusline=%F%m%r%h%w\[TYPE=%Y]\[POS=%l,%v][%p%%]\%{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 set laststatus=2
+set statusline=%F%m%r%h%w\[TYPE=%Y]\[POS=%l,%v][%p%%]\%{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 
 filetype on
 filetype plugin on
@@ -47,8 +46,8 @@ set showmatch
 set matchtime=5
 set scrolloff=3
 
-# set cursorline
-# hi CursorLine term=bold cterm=bold gui=bold ctermbg=0x808080 guibg=grey4
+" set cursorline
+" hi CursorLine term=bold cterm=bold gui=bold ctermbg=0x808080 guibg=grey4
 
 set visualbell
 
