@@ -50,6 +50,7 @@ set scrolloff=3
 " hi CursorLine term=bold cterm=bold gui=bold ctermbg=0x808080 guibg=grey4
 
 set visualbell
+set t_vb=
 
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
