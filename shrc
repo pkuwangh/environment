@@ -9,14 +9,11 @@ export PATH="/usr/local/go/bin:${PATH}:${HOME}/packages/bin"
 
 # tmux
 alias work='tmux a -t work || tmux new -s work'
+alias play='tmux a -t play || tmux new -s play'
 
 # alias
 alias lt='ls -lhrt'
-
 # ssh
-alias hao_agent_new='eval $(ssh-agent)'
-alias hao_agent_refresh='pkill ssh-agent && eval $(ssh-agent)'
-
 if [ -z "$(pgrep ssh-agent)" ]; then
     rm -rf /tmp/ssh-*
     eval $(ssh-agent -s) > /dev/null
@@ -24,11 +21,10 @@ else
     export SSH_AGENT_PID=$(pgrep ssh-agent | head -1)
     export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name agent.* | head -1)
 fi
-
 echo "SSH_AUTH_SOCK is ${SSH_AUTH_SOCK}"
 
-alias hao_gen_cert_ngc='rm -f ~/.nvinit/vault-token && nvinit ssh -user haowan -aggregate -ask-passcode'
-alias hao_cert_check='ssh-add -L | ssh-keygen -L -f -'
+alias shangban='nvinit ssh -auth=oidc'
+alias shangban-no-browser='nvinit ssh -auth=oidc -use-device-code'
 
 alias hao_ssh_check='ps aux | grep ssh'
 alias hao_ssh_reset='ps aux | grep ssh | grep "ovx3\\|sdac\\|bouncer\\|sjc4jmp" | awk "{print \$2}" | xargs kill -9'
