@@ -13,6 +13,7 @@ alias play='tmux a -t play || tmux new -s play'
 
 # alias
 alias lt='ls -lhrt'
+
 # ssh
 if [ -z "$(pgrep ssh-agent)" ]; then
     rm -rf /tmp/ssh-*
