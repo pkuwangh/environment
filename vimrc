@@ -1,7 +1,6 @@
 syntax on
 colorscheme desert
 set background=dark
-set guifont=Monospace\ 11
 hi normal guifg=white guibg=black
 hi comment ctermfg=red guifg=red
 

@@ -1,8 +1,3 @@
-# prompt
-set prompt = '%{\e]2;%~\a%}[%n@%m:%c3]%# '  # tsch
-export PROMPT_DIRTRIM=2   # bash
-
-export LS_COLORS=$LS_COLORS:'di=0;33'
 
 # path
 export PATH="/usr/local/go/bin:${PATH}:${HOME}/packages/bin"
@@ -10,6 +5,8 @@ export PATH="/usr/local/go/bin:${PATH}:${HOME}/packages/bin"
 # tmux
 alias work='tmux a -t work || tmux new -s work'
 alias play='tmux a -t play || tmux new -s play'
+alias bench='tmux a -t bench || tmux new -s bench'
+alias cluster='tmux a -t cluster || tmux new -s cluster'
 
 # alias
 alias lt='ls -lhrt'
