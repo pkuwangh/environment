@@ -1,12 +1,17 @@
 
 # path
 export PATH="/usr/local/go/bin:${PATH}:${HOME}/packages/bin"
+if [ -d "${HOME}/internal/sdac-tools/" ]; then
+  source "${HOME}/internal/sdac-tools/env.sh"
+fi
 
 # tmux
 alias work='tmux a -t work || tmux new -s work'
 alias play='tmux a -t play || tmux new -s play'
 alias bench='tmux a -t bench || tmux new -s bench'
 alias cluster='tmux a -t cluster || tmux new -s cluster'
+alias tile_h='tmux select-layout even-vertical'
+alias tile_4='tmux select-layout tiled'
 
 # alias
 alias lt='ls -lhrt'
@@ -26,4 +31,8 @@ alias shangban-no-browser='nvinit ssh -auth=oidc -use-device-code'
 
 alias hao_ssh_check='ps aux | grep ssh'
 alias hao_ssh_reset='ps aux | grep ssh | grep "ovx3\\|sdac\\|bouncer\\|sjc4jmp" | awk "{print \$2}" | xargs kill -9'
+
+# forward
+alias forward_grafana_ovx3_01='ssh -N -L 3000:sjc11-e05-ovx3-01.ovx.sjc11.nvmetal.net:3000 sjc4jmp'
+alias forward_prometheus_ovx3_01='ssh -N -L 9090:sjc11-e05-ovx3-01.ovx.sjc11.nvmetal.net:9090 sjc4jmp'
 
