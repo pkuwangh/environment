@@ -30,7 +30,7 @@ alias shangban='nvinit ssh -auth=oidc'
 alias shangban-no-browser='nvinit ssh -auth=oidc -use-device-code'
 
 alias hao_ssh_check='ps aux | grep ssh'
-alias hao_ssh_reset='ps aux | grep ssh | grep "ovx3\\|sdac\\|bouncer\\|sjc4jmp" | awk "{print \$2}" | xargs kill -9'
+alias hao_ssh_reset='ps aux | grep ssh | grep "ovx3\\|sdac\\|10.52.233" | awk "{print \$2}" | xargs kill -9'
 
 # forward
 alias forward_grafana_ovx3_01='ssh -N -L 3000:sjc11-e05-ovx3-01.ovx.sjc11.nvmetal.net:3000 sjc4jmp'
