@@ -11,6 +11,7 @@ alias play='tmux a -t play || tmux new -s play'
 alias bench='tmux a -t bench || tmux new -s bench'
 alias cluster='tmux a -t cluster || tmux new -s cluster'
 alias tile_h='tmux select-layout even-vertical'
+alias tile_v='tmux select-layout even-horizontal'
 alias tile_4='tmux select-layout tiled'
 
 # alias
