@@ -54,6 +54,8 @@ set t_vb=
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd BufRead,BufNewFile SConscript set filetype=python
+autocmd BufNewFile,BufRead makefile.rules set filetype=make
 
 fun! ShowFuncName()
     let lnum = line(".")

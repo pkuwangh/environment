@@ -1,18 +1,17 @@
-
 # path
 export PATH="/usr/local/go/bin:${PATH}:${HOME}/packages/bin"
-if [ -d "${HOME}/internal/sdac-tools/" ]; then
-  source "${HOME}/internal/sdac-tools/env.sh"
-fi
 
 # tmux
 alias work='tmux a -t work || tmux new -s work'
 alias play='tmux a -t play || tmux new -s play'
-alias bench='tmux a -t bench || tmux new -s bench'
-alias cluster='tmux a -t cluster || tmux new -s cluster'
 alias tile_h='tmux select-layout even-vertical'
 alias tile_v='tmux select-layout even-horizontal'
 alias tile_4='tmux select-layout tiled'
+
+# clusters
+alias k8s_sdac='source ${HOME}/nvwork/ngc/source_sdac.sh && kubectl get nodes'
+alias k8s_cbg1='source ${HOME}/nvwork/ngc/source_cbg1_prd32.sh'
+alias k8s_sjc11='source ${HOME}/nvwork/ngc/source_sjc11_prd31.sh'
 
 # alias
 alias lt='ls -lhrt'
@@ -31,9 +30,9 @@ alias shangban='nvinit ssh -auth=oidc'
 alias shangban-no-browser='nvinit ssh -auth=oidc -use-device-code'
 
 alias hao_ssh_check='ps aux | grep ssh'
-alias hao_ssh_reset='ps aux | grep ssh | grep "ovx3\\|sdac\\|10.52.233" | awk "{print \$2}" | xargs kill -9'
+alias hao_ssh_reset='ps aux | grep ssh | grep "ovx3\\|sdac" | awk "{print \$2}" | xargs kill -9'
 
 # forward
 alias forward_grafana_ovx3_01='ssh -N -L 3000:localhost:3000 ovx3_01'
 alias forward_prometheus_ovx3_01='ssh -N -L 9090:localhost:9090 ovx3_01'
-alias forward_vnc_ovx3_01='ssh -N -L 5901:localhost:5901 ovx3_01'
+alias forward_vnc_physical_ovx3_01='ssh -N -L 5900:localhost:5900 -L 5901:localhost:5901 -C -l ${USER} ovx3_01'
