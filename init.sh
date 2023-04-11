@@ -20,4 +20,5 @@ then
 fi
 
 # path
-cp bin/*  ~/packages/bin/
+cp bin/tmux-session.py  ~/packages/bin/tmux-load
+cp bin/tmux-session.py  ~/packages/bin/tmux-store
