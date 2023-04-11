@@ -9,9 +9,9 @@ alias tile_v='tmux select-layout even-horizontal'
 alias tile_4='tmux select-layout tiled'
 
 # clusters
-alias k8s_sdac='source ${HOME}/nvwork/ngc/source_sdac.sh && kubectl get nodes'
-alias k8s_cbg1='source ${HOME}/nvwork/ngc/source_cbg1_prd32.sh'
-alias k8s_sjc11='source ${HOME}/nvwork/ngc/source_sjc11_prd31.sh'
+alias kk8s_sdac='source ${HOME}/nvwork/ngc/source_sdac.sh && kubectl get nodes'
+alias kk8s_cbg1='source ${HOME}/nvwork/ngc/source_cbg1_prd32.sh'
+alias kk8s_sjc11='source ${HOME}/nvwork/ngc/source_sjc11_prd31.sh'
 
 # alias
 alias lt='ls -lhrt'

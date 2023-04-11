@@ -21,4 +21,4 @@ fi
 
 # path
 cp bin/tmux-session.py  ~/packages/bin/tmux-load
-cp bin/tmux-session.py  ~/packages/bin/tmux-store
+cp bin/tmux-session.py  ~/packages/bin/tmux-save
