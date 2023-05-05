@@ -33,6 +33,4 @@ alias hao_ssh_check='ps aux | grep ssh'
 alias hao_ssh_reset='ps aux | grep ssh | grep "ovx3\\|sdac" | awk "{print \$2}" | xargs kill -9'
 
 # forward
-alias forward_grafana_ovx3_01='ssh -N -L 3000:localhost:3000 ovx3_01'
-alias forward_prometheus_ovx3_01='ssh -N -L 9090:localhost:9090 ovx3_01'
-alias forward_vnc_physical_ovx3_01='ssh -N -L 5900:localhost:5900 -L 5901:localhost:5901 -C -l ${USER} ovx3_01'
+alias forward_vnc_physical_ovx3_07='ssh -N -L 5900:localhost:5900 -L 5901:localhost:5901 -C -l ${USER} ovx3-07'
