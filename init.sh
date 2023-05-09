@@ -16,9 +16,10 @@ cp dotfiles/gitconfig   ~/.gitconfig
 
 if ! grep -Fsq "alias play" ~/.bashrc
 then
-	cat dotfiles/shrc >> ~/.bashrc
+	cat dotfiles/bashrc >> ~/.bashrc
 fi
 
 # path
+mkdir -p ~/packages/bin
 cp bin/tmux-session.py  ~/packages/bin/tmux-load
 cp bin/tmux-session.py  ~/packages/bin/tmux-save
