@@ -41,5 +41,6 @@ alias hao_ssh_reset='ps aux | grep ssh | grep "ovx3\\|sdac" | awk "{print \$2}" 
 alias forward-ovx3-07-vnc-physical='ssh -N -L 5900:localhost:5900 -L 5901:localhost:5901 -C -l ${USER} ovx3-07'
 alias forward-ovx3-08-vnc-physical='ssh -N -L 5900:localhost:5900 -L 5901:localhost:5901 -C -l ${USER} ovx3-08'
 
+alias forward-ovx3-07-ipmi='ssh -N -L 9010:10.146.58.206:443 -L 7578:10.146.58.206:7578 sjc4jump'
 alias forward-ovx3-08-ipmi='ssh -N -L 9010:10.146.58.207:443 -L 7578:10.146.58.207:7578 sjc4jump'
 
