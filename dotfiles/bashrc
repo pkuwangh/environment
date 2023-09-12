@@ -1,46 +1,20 @@
 # path
 export PATH="/usr/local/go/bin:${PATH}:${HOME}/packages/bin"
 
-# tmux
-alias work='tmux a -t work || tmux new -s work'
-alias play='tmux a -t play || tmux new -s play'
-alias tile_h='tmux select-layout even-vertical'
-alias tile_v='tmux select-layout even-horizontal'
-alias tile_4='tmux select-layout tiled'
-
-# clusters
-alias kk8s_sdac='source ${HOME}/nvwork/ngc/source_sdac.sh && kubectl get nodes'
-alias kk8s_sjc11_prd31='source ${HOME}/nvwork/ngc/source_sjc11_prd31.sh'
-alias kk8s_cbg1_prd32='source ${HOME}/nvwork/ngc/source_cbg1_prd32.sh'
-alias kk8s_cbg1_prd33='source ${HOME}/nvwork/ngc/source_cbg1_prd33.sh'
-alias kk8s_cbg1_mp4='source ${HOME}/nvwork/ngc/source_cbg1_mp4.sh'
-alias kk8s_cbg1_mp3='source ${HOME}/nvwork/ngc/source_cbg1_mp3.sh'
-alias kk8s_cbg1_mp2='source ${HOME}/nvwork/ngc/source_cbg1_mp2.sh'
-alias kk8s_cbg1_mp1='source ${HOME}/nvwork/ngc/source_cbg1_mp1.sh'
-
 # alias
 alias lt='ls -lhrt'
-
-# ssh
-if [ -z "$(pgrep ssh-agent)" ]; then
-    rm -rf /tmp/ssh-*
-    eval $(ssh-agent -s) > /dev/null
-else
-    export SSH_AGENT_PID=$(pgrep ssh-agent | head -1)
-    export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name agent.* | head -1)
-fi
-echo "SSH_AUTH_SOCK is ${SSH_AUTH_SOCK}"
-
 alias shangban='nvinit ssh -auth=oidc'
 alias shangban-no-browser='nvinit ssh -auth=oidc -use-device-code'
 
 alias hao_ssh_check='ps aux | grep ssh'
 alias hao_ssh_reset='ps aux | grep ssh | grep "ovx3\\|sdac" | awk "{print \$2}" | xargs kill -9'
 
-# forward
-alias forward-ovx3-07-vnc-physical='ssh -N -L 5900:localhost:5900 -L 5901:localhost:5901 -C -l ${USER} ovx3-07'
-alias forward-ovx3-08-vnc-physical='ssh -N -L 5900:localhost:5900 -L 5901:localhost:5901 -C -l ${USER} ovx3-08'
 
-alias forward-ovx3-07-ipmi='ssh -N -L 9010:10.146.58.206:443 -L 7578:10.146.58.206:7578 sjc4jump'
-alias forward-ovx3-08-ipmi='ssh -N -L 9010:10.146.58.207:443 -L 7578:10.146.58.207:7578 sjc4jump'
+# tmux
+alias work='tmux a -t work || tmux new -s work'
+alias play='tmux a -t play || tmux new -s play'
+alias gogo='tmux a -t gogo || tmux new -s gogo'
+alias tile_h='tmux select-layout even-vertical'
+alias tile_v='tmux select-layout even-horizontal'
+alias tile_4='tmux select-layout tiled'
 
