@@ -13,7 +13,8 @@ alias hao_ssh_reset='ps aux | grep ssh | grep "ovx3\\|sdac" | awk "{print \$2}" 
 # tmux
 alias work='tmux a -t work || tmux new -s work'
 alias play='tmux a -t play || tmux new -s play'
-alias gogo='tmux a -t gogo || tmux new -s gogo'
+alias gogo1='tmux a -t gogo1 || tmux new -s gogo1'
+alias gogo2='tmux a -t gogo2 || tmux new -s gogo2'
 alias tile_h='tmux select-layout even-vertical'
 alias tile_v='tmux select-layout even-horizontal'
 alias tile_4='tmux select-layout tiled'
