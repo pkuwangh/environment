@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # packages
-# sudo apt-get update
-sudo apt-get install -y htop tmux git-lfs
+sudo apt-get install -y tmux git-lfs
 
 # git
 git lfs install
@@ -23,3 +22,4 @@ fi
 mkdir -p ~/packages/bin
 cp bin/tmux-session.py  ~/packages/bin/tmux-load
 cp bin/tmux-session.py  ~/packages/bin/tmux-save
+

@@ -57,9 +57,9 @@ def create_panes(all_sessions):
             print(f"\t\tkill dummy pane")
             run_cmd(["tmux", "kill-pane", "-t", f"{session}:{window}.0"])
             if len(panes) < 4:
-                print(f"\t\teven-vertical layout")
+                print(f"\t\teven-horizontal layout")
                 run_cmd(["tmux", "select-layout", "-t",
-                        f"{session}:{window}", "even-vertical"])
+                        f"{session}:{window}", "even-horizontal"])
             else:
                 print(f"\t\ttiled layout")
                 run_cmd(["tmux", "select-layout", "-t",

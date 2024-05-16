@@ -1,14 +1,20 @@
 # path
-export PATH="/usr/local/go/bin:${PATH}:${HOME}/packages/bin"
+export PATH="${PATH}:${HOME}/packages/bin"
 
 # alias
 alias lt='ls -lhrt'
 alias shangban='nvinit ssh -auth=oidc'
 alias shangban-no-browser='nvinit ssh -auth=oidc -use-device-code'
 
-alias hao_ssh_check='ps aux | grep ssh'
-alias hao_ssh_reset='ps aux | grep ssh | grep "ovx3\\|sdac" | awk "{print \$2}" | xargs kill -9'
-
+# ssh
+if [ -z "$(pgrep ssh-agent)" ]; then
+    rm -rf /tmp/ssh-*
+    eval $(ssh-agent -s) > /dev/null
+else
+    export SSH_AGENT_PID=$(pgrep ssh-agent | head -1)
+    export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name agent.* | head -1)
+fi
+echo "SSH_AUTH_SOCK is ${SSH_AUTH_SOCK}"
 
 # tmux
 alias work='tmux a -t work || tmux new -s work'
