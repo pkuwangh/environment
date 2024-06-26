@@ -3,13 +3,11 @@
 # packages
 sudo apt-get update
 
-# General
+# system
 echo -e "\n\nInstalling daily system packages\n"
-sudo apt-get install vim zip
-
-# OIDC
-echo -e "\n\nInstalling OIDC-related system packages\n"
-sudo apt-get install xdg-utils wslu
+sudo apt-get install net-tools openssh-server
+sudo apt-get install vim git git-lfs tmux curl
+sudo apt-get install postgresql-client
 
 # python
 echo -e "\n\nInstalling Python-related system packages\n"

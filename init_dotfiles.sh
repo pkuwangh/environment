@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# packages
-sudo apt-get install -y tmux git-lfs
-
 # git
 git lfs install
 git submodule update --init --recursive
